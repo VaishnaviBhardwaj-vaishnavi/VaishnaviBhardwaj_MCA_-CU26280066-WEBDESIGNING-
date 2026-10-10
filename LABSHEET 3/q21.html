@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Callback Function</h2>
+
+<p id="result"></p>
+
+<script>
+function greet(name, callback) {
+
+    setTimeout(function() {
+
+        let message = "Hello " + name;
+
+        callback(message);
+
+    }, 2000);
+}
+
+function display(message) {
+
+    document.getElementById("result").innerHTML = message;
+}
+
+document.getElementById("result").innerHTML =
+    "Waiting for 2 seconds...";
+
+greet("Mansi", display);
+</script>
+
+</body>
+</html>

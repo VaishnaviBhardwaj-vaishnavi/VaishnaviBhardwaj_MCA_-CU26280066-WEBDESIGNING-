@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function checkPalindrome(str) {
+    let reverse = str.split("").reverse().join("");
+
+    document.write("Original String: " + str + "<br>");
+    document.write("Reversed String: " + reverse + "<br>");
+
+    if (str === reverse)
+        document.write("It is a Palindrome");
+    else
+        document.write("It is not a Palindrome");
+}
+
+let text = prompt("Enter a string:");
+checkPalindrome(text);
+</script>
+
+</body>
+</html>

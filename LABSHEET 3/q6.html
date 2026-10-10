@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let numbers = [10, 20, 30, 40, 50];
+
+document.write("Original Array: " + numbers + "<br>");
+
+numbers.push(60);
+document.write("After push: " + numbers + "<br>");
+
+numbers.pop();
+document.write("After pop: " + numbers + "<br>");
+
+numbers.sort((a, b) => a - b);
+document.write("After sort: " + numbers + "<br>");
+
+let doubled = numbers.map(n => n * 2);
+document.write("After map: " + doubled + "<br>");
+
+let filtered = numbers.filter(n => n > 25);
+document.write("After filter: " + filtered);
+</script>
+
+</body>
+</html>

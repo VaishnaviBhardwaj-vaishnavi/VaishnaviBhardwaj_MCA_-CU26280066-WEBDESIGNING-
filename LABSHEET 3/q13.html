@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function counter() {
+
+    let count = 0;
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+
+        decrement: function() {
+            count--;
+            return count;
+        }
+    };
+}
+
+let c = counter();
+
+document.write("Increment: " + c.increment() + "<br>");
+document.write("Increment: " + c.increment() + "<br>");
+document.write("Decrement: " + c.decrement());
+</script>
+
+</body>
+</html>

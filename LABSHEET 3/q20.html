@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Dynamic Table</h2>
+
+<input type="number" id="rows" placeholder="Rows">
+<input type="number" id="cols" placeholder="Columns">
+
+<button onclick="createTable()">Create Table</button>
+
+<div id="table"></div>
+
+<script>
+function createTable() {
+
+    let rows = Number(document.getElementById("rows").value);
+    let cols = Number(document.getElementById("cols").value);
+
+    let table = document.createElement("table");
+
+    table.border = "1";
+
+    for (let i = 1; i <= rows; i++) {
+
+        let row = table.insertRow();
+
+        for (let j = 1; j <= cols; j++) {
+
+            let cell = row.insertCell();
+
+            cell.innerHTML = "Row " + i + ", Col " + j;
+        }
+    }
+
+    document.getElementById("table").innerHTML = "";
+
+    document.getElementById("table").appendChild(table);
+}
+</script>
+
+</body>
+</html>

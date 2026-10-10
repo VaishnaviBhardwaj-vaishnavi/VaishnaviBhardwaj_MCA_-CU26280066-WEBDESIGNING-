@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let json = '{"name":"Mansi","age":21}';
+
+try {
+
+    let data = JSON.parse(json);
+
+    document.write("Name: " + data.name + "<br>");
+    document.write("Age: " + data.age);
+
+} catch (error) {
+
+    document.write("Invalid JSON!");
+
+} finally {
+
+    document.write("<br>Program completed.");
+}
+</script>
+
+</body>
+</html>

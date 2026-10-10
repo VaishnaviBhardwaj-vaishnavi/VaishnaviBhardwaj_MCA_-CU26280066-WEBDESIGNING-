@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function countVowels(text) {
+
+    let count = 0;
+
+    for (let char of text.toLowerCase()) {
+
+        if ("aeiou".includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+let paragraph = prompt("Enter a paragraph:");
+
+document.write("Number of vowels = " + countVowels(paragraph));
+</script>
+
+</body>
+</html>

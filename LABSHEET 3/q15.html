@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let student = {
+    name: "Mansi",
+    age: 21,
+    course: "MCA"
+};
+
+// Destructuring
+let {name, age, course} = student;
+
+// Arrow function
+let greet = (name) => `Hello ${name}`;
+
+// Template literal
+let message = `${greet(name)}
+Age: ${age}
+Course: ${course}`;
+
+document.write(message);
+</script>
+
+</body>
+</html>
