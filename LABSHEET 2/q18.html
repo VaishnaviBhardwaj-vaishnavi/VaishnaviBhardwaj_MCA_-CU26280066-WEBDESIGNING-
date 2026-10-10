@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+
+    <style>
+        .container {
+            display: flex;
+            gap: 30px;
+            width: 800px;
+            margin: 30px auto;
+        }
+
+        .form, .location {
+            flex: 1;
+            padding: 20px;
+            background: lightgray;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .container {
+                width: 90%;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Contact Us</h2>
+
+<div class="container">
+
+    <div class="form">
+
+        <h3>Send Message</h3>
+
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+
+        <button>Send</button>
+
+    </div>
+
+    <div class="location">
+
+        <h3>Our Location</h3>
+
+        <p>ABC Company</p>
+        <p>Main Road, Roorkee</p>
+        <p>Uttarakhand, India</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

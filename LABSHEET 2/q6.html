@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Form</title>
+
+    <style>
+        form {
+            width: 600px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+        }
+
+        input, select, textarea {
+            padding: 8px;
+        }
+
+        button {
+            grid-column: 2;
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Student Form</h2>
+
+<form>
+
+    <label>Name:</label>
+    <input type="text">
+
+    <label>Email:</label>
+    <input type="email">
+
+    <label>Course:</label>
+    <select>
+        <option>BCA</option>
+        <option>MCA</option>
+    </select>
+
+    <label>Address:</label>
+    <textarea></textarea>
+
+    <button>Submit</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Gateway</title>
+
+    <style>
+        .payment {
+            width: 500px;
+            margin: 30px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .payment {
+                width: 90%;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="payment">
+
+<h2>Payment Details</h2>
+
+<form>
+
+<input type="text" placeholder="Card Holder Name">
+
+<input type="text" placeholder="Card Number">
+
+<input type="text" placeholder="Expiry Date">
+
+<input type="password" placeholder="CVV">
+
+<button>Pay Now</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
