@@ -1,0 +1,24 @@
+
+import csv
+from db_config import connect_db
+
+con = connect_db()
+cur = con.cursor()
+
+with open("users.csv", newline="") as file:
+    reader = csv.DictReader(file)
+    data = [
+        (r["name"], r["email"], int(r["age"]))
+        for r in reader
+    ]
+
+cur.executemany(
+    "INSERT INTO users (name, email, age) VALUES (%s, %s, %s)",
+    data
+)
+
+con.commit()
+print(len(data), "CSV records inserted")
+
+cur.close()
+con.close()
