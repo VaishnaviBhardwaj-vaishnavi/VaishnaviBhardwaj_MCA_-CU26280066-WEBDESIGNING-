@@ -1,0 +1,3 @@
+CREATE DATABASE college_db;
+SHOW DATABASES;
+USE college_db;
