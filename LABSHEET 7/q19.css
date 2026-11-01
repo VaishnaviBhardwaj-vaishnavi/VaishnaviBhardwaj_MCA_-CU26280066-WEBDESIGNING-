@@ -1,0 +1,204 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Banner */
+
+.banner {
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Categories */
+
+.category {
+    background: white;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px #ccc;
+}
+
+.category a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Promotional Banner */
+
+.promotion {
+    background: orange;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Book Grid */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 8px #ddd;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px #bbb;
+}
+
+.book-card img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.book-card a {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Forms */
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard .card {
+    background: white;
+    padding: 30px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 3px 8px #ccc;
+}
+
+/* Pagination */
+
+.pagination {
+    text-align: center;
+    padding: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    background: white;
+    color: #333;
+    margin: 5px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Invoice */
+
+.invoice {
+    background: white;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+/* Responsive Design */
+
+@media(max-width: 768px) {
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width: 480px) {
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .banner {
+        padding: 60px 15px;
+    }
+
+}
