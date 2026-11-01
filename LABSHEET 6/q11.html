@@ -1,0 +1,61 @@
+<div class="testimonial">
+    <h2>Customer Testimonials</h2>
+
+    <p id="review"></p>
+    <h3 id="person"></h3>
+
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+</div>
+
+CSS
+
+.testimonial {
+    text-align: center;
+    padding: 30px;
+    background: #eee;
+    transition: opacity 0.5s;
+}
+
+.testimonial p {
+    font-size: 20px;
+}
+
+jss
+
+let reviews = [
+    {
+        message: "Excellent website design!",
+        name: "Rahul"
+    },
+    {
+        message: "Very professional work!",
+        name: "Priya"
+    },
+    {
+        message: "Amazing experience!",
+        name: "Amit"
+    }
+];
+
+let index = 0;
+
+function showReview() {
+    document.getElementById("review").innerHTML =
+        reviews[index].message;
+
+    document.getElementById("person").innerHTML =
+        reviews[index].name;
+}
+
+function next() {
+    index = (index + 1) % reviews.length;
+    showReview();
+}
+
+function previous() {
+    index = (index - 1 + reviews.length) % reviews.length;
+    showReview();
+}
+
+showReview();

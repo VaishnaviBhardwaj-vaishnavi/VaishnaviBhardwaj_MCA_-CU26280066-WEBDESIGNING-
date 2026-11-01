@@ -1,0 +1,44 @@
+<form id="myForm">
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="email" id="email" placeholder="Enter Email">
+
+    <textarea id="message" placeholder="Enter Message"></textarea>
+
+    <button type="submit">Submit</button>
+
+    <p id="result"></p>
+
+</form>
+
+
+javascript 
+document.getElementById("myForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "" || email === "" || message === "") {
+        document.getElementById("result").innerHTML =
+            "All fields are required!";
+    }
+
+    else if (!emailPattern.test(email)) {
+        document.getElementById("result").innerHTML =
+            "Enter a valid email!";
+    }
+
+    else {
+        document.getElementById("result").innerHTML =
+            "Form submitted successfully!";
+
+        this.reset();
+    }
+
+});

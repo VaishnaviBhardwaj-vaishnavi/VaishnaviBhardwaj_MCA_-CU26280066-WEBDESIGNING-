@@ -1,0 +1,41 @@
+<div class="faq">
+
+    <div class="question">
+        <h3 onclick="toggleFAQ(this)">
+            What is HTML?
+        </h3>
+        <p>HTML is used to create web pages.</p>
+    </div>
+
+    <div class="question">
+        <h3 onclick="toggleFAQ(this)">
+            What is CSS?
+        </h3>
+        <p>CSS is used to style web pages.</p>
+    </div>
+
+    <div class="question">
+        <h3 onclick="toggleFAQ(this)">
+            What is JavaScript?
+        </h3>
+        <p>JavaScript makes web pages interactive.</p>
+    </div>
+
+</div>
+
+CSS
+.question p {
+    display: none;
+    padding: 10px;
+}
+
+.question.active p {
+    display: block;
+}
+
+.question h3 {
+    background: #333;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}

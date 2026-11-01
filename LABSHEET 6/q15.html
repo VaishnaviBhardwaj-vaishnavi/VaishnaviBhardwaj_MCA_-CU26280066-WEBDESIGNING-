@@ -1,0 +1,67 @@
+<div class="stats">
+
+    <div>
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Projects</p>
+    </div>
+
+    <div>
+        <h2 class="counter" data-target="50">0</h2>
+        <p>Clients</p>
+    </div>
+
+    <div>
+        <h2 class="counter" data-target="25">0</h2>
+        <p>Awards</p>
+    </div>
+
+</div>
+
+css
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px;
+}
+
+.counter {
+    font-size: 40px;
+    color: orange;
+}
+
+jss
+
+let counters = document.querySelectorAll(".counter");
+
+let observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            let counter = entry.target;
+            let target = Number(counter.dataset.target);
+            let count = 0;
+
+            let interval = setInterval(() => {
+
+                count++;
+
+                counter.innerText = count;
+
+                if (count >= target) {
+                    clearInterval(interval);
+                }
+
+            }, 20);
+
+            observer.unobserve(counter);
+        }
+
+    });
+
+});
+
+counters.forEach(counter => observer.observe(counter));

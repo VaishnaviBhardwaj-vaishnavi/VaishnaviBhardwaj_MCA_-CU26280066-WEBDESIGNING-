@@ -1,0 +1,39 @@
+<button id="topBtn">↑</button>
+
+CSS
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+}
+
+
+jss
+let btn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 200) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+
+});
+
+btn.addEventListener("click", function() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});

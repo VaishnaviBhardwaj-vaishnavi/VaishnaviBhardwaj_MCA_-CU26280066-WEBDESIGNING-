@@ -1,0 +1,62 @@
+<section class="pricing">
+
+    <div class="card">
+        <h2>Basic</h2>
+        <h3>₹499</h3>
+        <p>Basic Features</p>
+        <button>Choose Plan</button>
+    </div>
+
+    <div class="card popular">
+        <h2>Standard</h2>
+        <h3>₹999</h3>
+        <p>All Standard Features</p>
+        <button>Choose Plan</button>
+    </div>
+
+    <div class="card">
+        <h2>Premium</h2>
+        <h3>₹1499</h3>
+        <p>All Premium Features</p>
+        <button>Choose Plan</button>
+    </div>
+
+</section>
+
+
+CSS
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #aaa;
+}
+
+.popular {
+    border: 3px solid orange;
+}
+
+.card button {
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

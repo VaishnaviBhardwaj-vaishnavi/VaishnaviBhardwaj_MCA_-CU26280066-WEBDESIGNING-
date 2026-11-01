@@ -1,0 +1,47 @@
+<section class="features">
+
+    <div class="feature">
+        <h2>⚡</h2>
+        <h3>Fast Performance</h3>
+        <p>Our website loads quickly.</p>
+    </div>
+
+    <div class="feature">
+        <h2>🔒</h2>
+        <h3>Secure System</h3>
+        <p>Your information stays protected.</p>
+    </div>
+
+    <div class="feature">
+        <h2>📱</h2>
+        <h3>Responsive Design</h3>
+        <p>Works on all devices.</p>
+    </div>
+
+</section>
+
+CSS
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.feature {
+    flex: 1 1 200px;
+    padding: 25px;
+    text-align: center;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.feature h2 {
+    font-size: 40px;
+}
+
+.feature:hover {
+    background: lightblue;
+}

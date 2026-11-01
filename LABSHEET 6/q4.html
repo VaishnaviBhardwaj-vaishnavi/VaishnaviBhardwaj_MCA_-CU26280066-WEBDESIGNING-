@@ -1,0 +1,42 @@
+<button class="menu-toggle" id="menuToggle">
+    ☰
+</button>
+
+css
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+
+js 
+
+const menuButton = document.getElementById("menuToggle");
+const nav = document.querySelector("nav");
+
+menuButton.addEventListener("click", function() {
+
+    nav.classList.toggle("active");
+
+});
