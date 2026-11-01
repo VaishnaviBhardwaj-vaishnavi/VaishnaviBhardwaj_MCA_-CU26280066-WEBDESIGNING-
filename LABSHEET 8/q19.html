@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Testimonials</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fffaf0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #f3dfc5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.stars {
+    color: orange;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Customer Testimonials</h1>
+
+<div class="container">
+
+<div class="card">
+<h2>Neha</h2>
+<div class="stars" data-rating="5"
+tabindex="0" role="group"
+aria-label="Rate Neha's review">★★★★★</div>
+<p>Amazing cakes and excellent service!</p>
+</div>
+
+<div class="card">
+<h2>Rohit</h2>
+<div class="stars" data-rating="4"
+tabindex="0" role="group"
+aria-label="Rate Rohit's review">★★★★☆</div>
+<p>Fresh bread and delicious pastries.</p>
+</div>
+
+<div class="card">
+<h2>Anjali</h2>
+<div class="stars" data-rating="5"
+tabindex="0" role="group"
+aria-label="Rate Anjali's review">★★★★★</div>
+<p>My favourite bakery in the city.</p>
+</div>
+
+</div>
+
+<script>
+
+document.querySelectorAll(".stars").forEach(star => {
+
+    function update(rating) {
+
+        star.dataset.rating = rating;
+
+        star.innerHTML =
+            "★".repeat(rating) +
+            "☆".repeat(5 - rating);
+
+    }
+
+    star.addEventListener("click", function() {
+
+        let rating = Number(star.dataset.rating);
+
+        update(rating === 5 ? 1 : rating + 1);
+
+    });
+
+    star.addEventListener("keydown", function(event) {
+
+        let rating = Number(star.dataset.rating);
+
+        if(event.key === "ArrowRight") {
+            update(Math.min(5, rating + 1));
+        }
+
+        if(event.key === "ArrowLeft") {
+            update(Math.max(1, rating - 1));
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

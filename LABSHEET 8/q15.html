@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website Project Presentation</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #eee;
+}
+
+.slide {
+    display: none;
+    background: white;
+    padding: 70px 20px;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+button {
+    padding: 12px 25px;
+    background: brown;
+    color: white;
+    border: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Project Presentation</h1>
+
+<div class="slide">
+<h2>Slide 1: Introduction</h2>
+<p>The Golden Crust Bakery Website</p>
+</div>
+
+<div class="slide">
+<h2>Slide 2: Planning</h2>
+<p>Client requirements and objectives.</p>
+</div>
+
+<div class="slide">
+<h2>Slide 3: Wireframing</h2>
+<p>Website structure and page layout.</p>
+</div>
+
+<div class="slide">
+<h2>Slide 4: Development</h2>
+<p>HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="slide">
+<h2>Slide 5: Testing</h2>
+<p>Browser and mobile testing.</p>
+</div>
+
+<div class="slide">
+<h2>Slide 6: Conclusion</h2>
+<p>Responsive bakery website completed.</p>
+</div>
+
+<button onclick="changeSlide(-1)">Previous</button>
+<button onclick="changeSlide(1)">Next</button>
+
+<p id="number"></p>
+
+<script>
+
+let current = 0;
+
+let slides = document.querySelectorAll(".slide");
+
+function showSlide() {
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    slides[current].style.display = "block";
+
+    document.getElementById("number").innerHTML =
+        "Slide " + (current + 1) + " of " + slides.length;
+}
+
+function changeSlide(direction) {
+
+    current = (current + direction + slides.length) % slides.length;
+
+    showSlide();
+}
+
+showSlide();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hero Image Carousel</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 50px 15px;
+    background: #f2d5b5;
+    transition: background-color 0.5s;
+}
+
+h1 {
+    color: brown;
+}
+
+button {
+    padding: 12px 20px;
+    background: brown;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="carousel">
+
+    <h1 id="title">Fresh Cakes</h1>
+
+    <p id="description">
+        Enjoy our delicious cakes.
+    </p>
+
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+
+</div>
+
+<script>
+
+let slides = [
+    ["Fresh Cakes", "Enjoy our delicious cakes."],
+    ["Fresh Bread", "Taste our freshly baked bread."],
+    ["Cookies", "Try our tasty cookies."]
+];
+
+let index = 0;
+
+function showSlide() {
+    document.getElementById("title").innerHTML =
+        slides[index][0];
+
+    document.getElementById("description").innerHTML =
+        slides[index][1];
+}
+
+function next() {
+    index = (index + 1) % slides.length;
+    showSlide();
+}
+
+function previous() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Website Code Audit</title>
+
+<style>
+
+/* General page styling */
+
+body {
+    font-family: Arial;
+    background: #fffaf0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Main heading */
+
+h1 {
+    color: brown;
+}
+
+/* Audit section */
+
+.audit {
+    background: #f5dfc5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Website Code Audit</h1>
+
+<div class="audit">
+
+<h2>Final Checklist</h2>
+
+<label>
+<input type="checkbox">
+HTML structure checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+CSS styling checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+JavaScript checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+Mobile responsiveness checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+Accessibility checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+SEO checked
+</label>
+
+<br><br>
+
+<label>
+<input type="checkbox">
+Browser compatibility checked
+</label>
+
+<br><br>
+
+<button onclick="audit()">
+Check Audit Status
+</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+// Final project audit function
+
+function audit() {
+
+    let checks = document.querySelectorAll(
+        'input[type="checkbox"]'
+    );
+
+    let completed = 0;
+
+    checks.forEach(function(check) {
+
+        if(check.checked) {
+            completed++;
+        }
+
+    });
+
+    document.getElementById("result").innerHTML =
+        completed + " out of " + checks.length +
+        " checks completed.";
+
+}
+
+</script>
+
+</body>
+</html>

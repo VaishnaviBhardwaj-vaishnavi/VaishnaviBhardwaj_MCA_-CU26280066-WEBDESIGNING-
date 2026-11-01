@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Social Media Footer</title>
+
+<style>
+
+footer {
+    background: #4b3025;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+a {
+    color: white;
+    margin: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<footer>
+
+<h2>The Golden Crust</h2>
+
+<p>Follow us on social media</p>
+
+<a href="https://www.instagram.com/"
+target="_blank" rel="noopener">
+Instagram</a>
+
+<a href="https://www.facebook.com/"
+target="_blank" rel="noopener">
+Facebook</a>
+
+<a href="https://www.youtube.com/"
+target="_blank" rel="noopener">
+YouTube</a>
+
+<hr>
+
+<h3>Share Our Website</h3>
+
+<button onclick="shareWebsite()">
+Share Website
+</button>
+
+<script>
+
+function shareWebsite() {
+
+    if (navigator.share) {
+
+        navigator.share({
+            title: "The Golden Crust",
+            text: "Visit our bakery website!",
+            url: location.href
+        });
+
+    } else {
+
+        alert("Sharing is not supported in this browser.");
+
+    }
+
+}
+
+</script>
+
+<p>Copyright 2026 The Golden Crust</p>
+
+</footer>
+
+</body>
+</html>

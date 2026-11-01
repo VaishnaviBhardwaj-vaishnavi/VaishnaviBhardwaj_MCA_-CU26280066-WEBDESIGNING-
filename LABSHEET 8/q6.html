@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Accessible Bakery Website</title>
+
+<style>
+body {
+    background: white;
+    color: #222;
+    font-family: Arial;
+}
+
+a {
+    color: #0645ad;
+}
+
+button {
+    background: #70452e;
+    color: white;
+    padding: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header role="banner">
+    <h1>The Golden Crust</h1>
+</header>
+
+<nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main id="home" role="main">
+
+    <h2>Welcome to Our Bakery</h2>
+
+    <img
+    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+    alt="Fresh chocolate cake"
+    width="250">
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <p>Fresh cakes and bakery products.</p>
+
+        <button type="button">Order Now</button>
+    </section>
+
+</main>
+
+<footer role="contentinfo" id="contact">
+    <p>Contact: goldencrust@example.com</p>
+</footer>
+
+</body>
+</html>

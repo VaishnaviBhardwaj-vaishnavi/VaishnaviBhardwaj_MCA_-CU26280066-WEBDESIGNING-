@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Local Test Environment</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fffaf0;
+    padding: 30px;
+}
+
+.box {
+    background: #f0d8bd;
+    padding: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Local Website Testing</h1>
+
+<div class="box">
+
+<h2>The Golden Crust Bakery</h2>
+
+<p id="status"></p>
+
+<button onclick="checkServer()">
+Check Website Status
+</button>
+
+</div>
+
+<script>
+
+function checkServer() {
+
+    document.getElementById("status").innerHTML =
+        "Website is running in the browser.";
+
+}
+
+</script>
+
+</body>
+</html>

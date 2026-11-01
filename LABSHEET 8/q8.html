@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bakery Booking Form</title>
+</head>
+
+<body>
+
+<h1>Book Your Order</h1>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name" required>
+    <br><br>
+
+    Email:
+    <input type="email" id="email" required>
+    <br><br>
+
+    Phone:
+    <input type="tel" id="phone" required>
+    <br><br>
+
+    Date:
+    <input type="date" id="date" required>
+    <br><br>
+
+    Service:
+    <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Cake Booking</option>
+        <option>Birthday Order</option>
+        <option>Bulk Order</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let date = document.getElementById("date").value;
+
+    if (name.length < 2) {
+        alert("Enter a valid name");
+        return false;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Enter a valid email");
+        return false;
+    }
+
+    if (!/^[6-9][0-9]{9}$/.test(phone)) {
+        alert("Enter a valid mobile number");
+        return false;
+    }
+
+    if (!date || date < new Date().toLocaleDateString("en-CA")) {
+        alert("Select a valid date");
+        return false;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Booking submitted successfully!";
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

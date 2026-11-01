@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Live Website Demonstration</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fffaf0;
+}
+
+.box {
+    background: #f5dfc5;
+    padding: 30px;
+    margin: 20px;
+}
+
+button {
+    padding: 12px;
+    background: brown;
+    color: white;
+    border: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Golden Crust Live Demo</h1>
+
+<div class="box">
+
+<h2 id="heading">Welcome to Our Bakery</h2>
+
+<p id="description">
+Click the button to demonstrate interaction.
+</p>
+
+<button onclick="demo()">
+Start Demonstration
+</button>
+
+</div>
+
+<script>
+
+function demo() {
+
+    document.getElementById("heading").innerHTML =
+        "Interactive Feature Demonstration";
+
+    document.getElementById("description").innerHTML =
+        "JavaScript is working successfully!";
+
+    alert("Website demonstration started!");
+
+}
+
+</script>
+
+</body>
+</html>

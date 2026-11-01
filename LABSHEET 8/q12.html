@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Browser Compatibility Test</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fffaf0;
+}
+
+.box {
+    padding: 30px;
+    background: #e8c9a5;
+    margin: 30px;
+}
+
+button {
+    padding: 12px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Cross Browser Testing</h1>
+
+<div class="box">
+
+<h2>Golden Crust Bakery</h2>
+
+<p>This page can be tested in different browsers.</p>
+
+<button onclick="testBrowser()">
+Check Current Browser
+</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function testBrowser() {
+
+    let browser = "Unknown Browser";
+
+    if (navigator.userAgent.includes("Edg")) {
+        browser = "Microsoft Edge";
+    }
+    else if (navigator.userAgent.includes("Firefox")) {
+        browser = "Mozilla Firefox";
+    }
+    else if (navigator.userAgent.includes("Chrome")) {
+        browser = "Google Chrome";
+    }
+    else if (navigator.userAgent.includes("Safari")) {
+        browser = "Apple Safari";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Current Browser: " + browser;
+
+}
+
+</script>
+
+</body>
+</html>
